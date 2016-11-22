@@ -1,0 +1,36 @@
+@import 'settings';
+
+img {
+  max-width: 100%;
+}
+
+body {
+  $side-padding: calc( (100% - 1200px)/2 );
+  .section {
+    padding: 0 $side-padding;
+  }
+}
+
+.header {
+  .header-nav {
+    background-color: $black;
+    color: $lightgray;
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+  .filtering {
+    background-color: $lightgray;
+    color: $black;
+    border-bottom: 1px solid $gray;
+  }
+}
+
+
+
+.footer {
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: $lightgray;
+}
