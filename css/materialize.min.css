@@ -1,62 +1,62 @@
 .materialize-red {
-  background-color: #e51c23 !important; }
+  background-color: #607d8b !important; }
 
 .materialize-red-text {
-  color: #e51c23 !important; }
+  color: #607d8b !important; }
 
 .materialize-red.lighten-5 {
-  background-color: #fdeaeb !important; }
+  background-color: #eceff1 !important; }
 
 .materialize-red-text.text-lighten-5 {
-  color: #fdeaeb !important; }
+  color: #eceff1 !important; }
 
 .materialize-red.lighten-4 {
-  background-color: #f8c1c3 !important; }
+  background-color: #cfd8dc !important; }
 
 .materialize-red-text.text-lighten-4 {
-  color: #f8c1c3 !important; }
+  color: #cfd8dc !important; }
 
 .materialize-red.lighten-3 {
-  background-color: #f3989b !important; }
+  background-color: #b0bec5 !important; }
 
 .materialize-red-text.text-lighten-3 {
-  color: #f3989b !important; }
+  color: #b0bec5 !important; }
 
 .materialize-red.lighten-2 {
-  background-color: #ee6e73 !important; }
+  background-color: #90a4ae !important; }
 
 .materialize-red-text.text-lighten-2 {
-  color: #ee6e73 !important; }
+  color: #90a4ae !important; }
 
 .materialize-red.lighten-1 {
-  background-color: #ea454b !important; }
+  background-color: #78909c !important; }
 
 .materialize-red-text.text-lighten-1 {
-  color: #ea454b !important; }
+  color: #78909c !important; }
 
 .materialize-red.darken-1 {
-  background-color: #d0181e !important; }
+  background-color: #546e7a !important; }
 
 .materialize-red-text.text-darken-1 {
-  color: #d0181e !important; }
+  color: #546e7a !important; }
 
 .materialize-red.darken-2 {
-  background-color: #b9151b !important; }
+  background-color: #455a64 !important; }
 
 .materialize-red-text.text-darken-2 {
-  color: #b9151b !important; }
+  color: #455a64 !important; }
 
 .materialize-red.darken-3 {
-  background-color: #a21318 !important; }
+  background-color: #37474f !important; }
 
 .materialize-red-text.text-darken-3 {
-  color: #a21318 !important; }
+  color: #37474f !important; }
 
 .materialize-red.darken-4 {
-  background-color: #8b1014 !important; }
+  background-color: #263238 !important; }
 
 .materialize-red-text.text-darken-4 {
-  color: #8b1014 !important; }
+  color: #263238 !important; }
 
 .red {
   background-color: #F44336 !important; }
@@ -2018,7 +2018,7 @@ a {
 blockquote {
   margin: 20px 0;
   padding-left: 1.5rem;
-  border-left: 5px solid #ee6e73; }
+  border-left: 5px solid #90a4ae; }
 
 i {
   line-height: inherit; }
@@ -2057,7 +2057,7 @@ video.responsive-video {
   .pagination li.active a {
     color: #fff; }
   .pagination li.active {
-    background-color: #ee6e73; }
+    background-color: #90a4ae; }
   .pagination li.disabled a {
     cursor: default;
     color: #999; }
@@ -2193,7 +2193,7 @@ ul.staggered-list li {
 footer.page-footer {
   margin-top: 20px;
   padding-top: 20px;
-  background-color: #ee6e73; }
+  background-color: #90a4ae; }
   footer.page-footer .footer-copyright {
     overflow: hidden;
     height: 50px;
@@ -2970,7 +2970,7 @@ input[type=range] + .thumb {
 
 nav {
   color: #fff;
-  background-color: #ee6e73;
+  background-color: #90a4ae;
   width: 100%;
   height: 56px;
   line-height: 56px; }
@@ -3470,7 +3470,7 @@ small {
     margin: 0;
     text-transform: uppercase; }
     .tabs .tab a {
-      color: rgba(238, 110, 115, 0.7);
+      color: rgba(144, 164, 174, 0.7);
       display: block;
       width: 100%;
       height: 100%;
@@ -3481,16 +3481,16 @@ small {
       transition: color .28s ease; }
       .tabs .tab a:hover, .tabs .tab a.active {
         background-color: transparent;
-        color: #ee6e73; }
+        color: #90a4ae; }
     .tabs .tab.disabled a,
     .tabs .tab.disabled a:hover {
-      color: rgba(238, 110, 115, 0.7);
+      color: rgba(144, 164, 174, 0.7);
       cursor: default; }
   .tabs .indicator {
     position: absolute;
     bottom: 0;
     height: 2px;
-    background-color: #f6b2b5;
+    background-color: #bcc8ce;
     will-change: left, right; }
 
 @media only screen and (max-width: 992px) {
@@ -5125,11 +5125,11 @@ input[type=range]:focus::-ms-fill-upper {
   .table-of-contents a:hover {
     color: #a8a8a8;
     padding-left: 19px;
-    border-left: 1px solid #ea4a4f; }
+    border-left: 1px solid #7b96a3; }
   .table-of-contents a.active {
     font-weight: 500;
     padding-left: 18px;
-    border-left: 2px solid #ea4a4f; }
+    border-left: 2px solid #7b96a3; }
 
 .side-nav {
   position: fixed;
@@ -5260,7 +5260,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .side-nav .collapsible-body > ul:not(.collapsible) > li.active,
 .side-nav.fixed .collapsible-body > ul:not(.collapsible) > li.active {
-  background-color: #ee6e73; }
+  background-color: #90a4ae; }
   .side-nav .collapsible-body > ul:not(.collapsible) > li.active a,
   .side-nav.fixed .collapsible-body > ul:not(.collapsible) > li.active a {
     color: #fff; }

@@ -6,19 +6,31 @@
 
 // Google Color Palette defined: http://www.google.com/design/spec/style/color.html
 
-
 $materialize-red: (
-  "base":       #e51c23,
-  "lighten-5":  #fdeaeb,
-  "lighten-4":  #f8c1c3,
-  "lighten-3":  #f3989b,
-  "lighten-2":  #ee6e73,
-  "lighten-1":  #ea454b,
-  "darken-1":   #d0181e,
-  "darken-2":   #b9151b,
-  "darken-3":   #a21318,
-  "darken-4":   #8b1014,
+  "base":       #607d8b,
+  "lighten-5":  #eceff1,
+  "lighten-4":  #cfd8dc,
+  "lighten-3":  #b0bec5,
+  "lighten-2":  #90a4ae,
+  "lighten-1":  #78909c,
+  "darken-1":   #546e7a,
+  "darken-2":   #455a64,
+  "darken-3":   #37474f,
+  "darken-4":   #263238
 );
+
+// $materialize-red: (
+//   "base":       #e51c23,
+//   "lighten-5":  #fdeaeb,
+//   "lighten-4":  #f8c1c3,
+//   "lighten-3":  #f3989b,
+//   "lighten-2":  #ee6e73,
+//   "lighten-1":  #ea454b,
+//   "darken-1":   #d0181e,
+//   "darken-2":   #b9151b,
+//   "darken-3":   #a21318,
+//   "darken-4":   #8b1014,
+// );
 
 $red: (
   "base":       #F44336,
