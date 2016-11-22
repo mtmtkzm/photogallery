@@ -1,0 +1,26 @@
+{
+  "name": "photogallery",
+  "version": "1.0.0",
+  "description": "photogallery",
+  "main": "index.js",
+  "devDependencies": {
+    "node-sass": "^3.7.0"
+  },
+  "scripts": {
+    "build": "node-sass ./scss --output ./css",
+    "server": "python -m SimpleHTTPServer 8000",
+    "watch-scss": "node-sass ./scss --output ./css -w",
+    "watch": "npm run watch-scss & npm run server"    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtmtkzm/photogallery.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mtmtkzm/photogallery/issues"
+  },
+  "homepage": "https://github.com/mtmtkzm/photogallery#readme"
+}
