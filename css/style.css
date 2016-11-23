@@ -7,16 +7,15 @@ body .section {
 .header .header-nav {
   background-color: #252525;
   color: #fafafa; }
-  .header .header-nav h1 {
-    margin-bottom: 0; }
 
 .header .filtering {
   background-color: #fafafa;
   color: #252525;
-  border-bottom: 1px solid #959595; }
+  box-shadow: 0 1px 1px #ddd; }
 
 .footer {
   height: 40px;
   text-align: center;
   line-height: 40px;
-  background-color: #fafafa; }
+  background-color: #fafafa;
+  box-shadow: 0 -1px 1px #ddd; }
