@@ -16,14 +16,14 @@
     var _self = this;
     var exifAll = {};
 
-    var exif = {
-      'camera': 'undefined',
-      'ss': 'undefined',
-      'f': 'undefined',
-      'focal': 'undefined',
-      'iso': 'undefined',
-      'exposure': 'undefined',
-      'flash': 'undefinede'
+    this.exif = {
+      'camera': '--',
+      'ss': '--',
+      'f': '--',
+      'focal': '--',
+      'iso': '--',
+      'exposure': '--',
+      'flash': '--'
     };
 
     getExif(e) {
@@ -32,16 +32,23 @@
         exifAll = EXIF.getAllTags(this); // 全情報をブッコム（ここのthisは<img>）
 
         // 必要な情報だけを抽出
-        exif.camera = exifAll.Model;
-        exif.ss = exifAll.ShutterSpeedValue;
-        exif.f = exifAll.FNumber;
-        exif.focal = exifAll.FocalLengthIn35mmFilm;
-        exif.iso = exifAll.ISOSpeedRatings;
-        exif.exposure = exifAll.ExposureTime;
-        exif.flash = exifAll.Flash;
+        _self.exif.camera = exifAll.Model;
+        _self.exif.ss = exifAll.ShutterSpeedValue;
+        _self.exif.f = exifAll.FNumber;
+        _self.exif.focal = exifAll.FocalLengthIn35mmFilm;
+        _self.exif.iso = exifAll.ISOSpeedRatings;
+        _self.exif.exposure = exifAll.ExposureTime;
+        _self.exif.flash = exifAll.Flash;
 
+        _self.update(_self.exif);
       });
     }
+    // console.log(this);
+    // setTimeout(function() {
+    //   console.log(_self.exif);
+      
+    // }, 3000);
+    
     
   </script>
 </my-photo>
