@@ -15,18 +15,18 @@
 
 <body>
   <header class="header">
-    <nav class="">
+    <nav class="header-nav section">
       <h1>Logo</h1>
     </nav>
     <div class="filtering section">
       <h4>Filtering?</h4>
-      <p>[Camera]</p>
-      <p>[Exposure]</p>
-      <p>[Aperture]</p>
-      <p>[Focal Length]</p>
-      <p>[ISO Speed]</p>
-      <p>[Exposure Bias]</p>
-      <p>[Flash]</p>
+      <p class="icon-camera">　-------●-----------</p>
+      <p class="icon-camera">　------●------------</p>
+      <p class="icon-camera">　-----------●-------</p>
+      <p class="icon-camera">　-------------●-----</p>
+      <p class="icon-camera">　------●------------</p>
+      <p class="icon-camera">　---●---------------</p>
+      <p class="icon-camera">　--------------●----</p>
     </div>
   </header>
   <main class="main section">
@@ -46,9 +46,17 @@
     <span class="footer-copyright">&copy; 2016 mtmtkzm.com</span>
   </footer>
 
+  <!-- Exif JS -->
+  <script src="./js/exif.js"></script>
+
+  <!-- Riot JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.6.7/riot+compiler.min.js"></script>
   <script src="./tag/my-photo.tag" type="riot/tag"></script>
   <script> riot.mount('*'); </script>
+
+  <!-- My JS -->
+  <script src="./js/app.js"></script>
+
 </body>
 
 </html>

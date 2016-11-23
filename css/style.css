@@ -1,5 +1,31 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?1g5axs");
+  src: url("../fonts/icomoon.eot?1g5axs#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?1g5axs") format("truetype"), url("../fonts/icomoon.woff?1g5axs") format("woff"), url("../fonts/icomoon.svg?1g5axs#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-camera:before {
+  content: "\e90f"; }
+
 img {
   max-width: 100%; }
+
+[class^="icon-"], [class*=" icon-"] {
+  margin-right: .5em; }
 
 body .section {
   padding: 0 calc( (100% - 1200px)/2); }
@@ -11,11 +37,11 @@ body .section {
 .header .filtering {
   background-color: #fafafa;
   color: #252525;
-  box-shadow: 0 1px 1px #ddd; }
+  box-shadow: 0 1px 1px #dddddd; }
 
 .footer {
   height: 40px;
   text-align: center;
   line-height: 40px;
   background-color: #fafafa;
-  box-shadow: 0 -1px 1px #ddd; }
+  box-shadow: 0 -1px 1px #dddddd; }
