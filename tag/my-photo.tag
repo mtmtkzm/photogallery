@@ -13,6 +13,14 @@
   </section>
 
   <script>
+    var xhr= new XMLHttpRequest();
+    xhr.open('HEAD', './images/img1.jpg');
+    xhr.send();
+
+    xhr.addEventListener('load',function(e){
+      console.log(this.status);
+    });
+
     var _self = this;
     var exifAll = {};
 
@@ -29,7 +37,7 @@
     getExif(e) {
       e.preventUpdate = true;
       EXIF.getData(e.target, function() {
-        exifAll = EXIF.getAllTags(this); // 全情報をブッコム（ここのthisは<img>）
+        exifAll = EXIF.getAllTags(this);
 
         // 必要な情報だけを抽出
         _self.exif.camera = exifAll.Model;
@@ -39,16 +47,10 @@
         _self.exif.iso = exifAll.ISOSpeedRatings;
         _self.exif.exposure = exifAll.ExposureTime;
         _self.exif.flash = exifAll.Flash;
-
+        // 抽出後の情報でテンプレート変数をupdate
         _self.update(_self.exif);
       });
-    }
-    // console.log(this);
-    // setTimeout(function() {
-    //   console.log(_self.exif);
-      
-    // }, 3000);
-    
+    }    
     
   </script>
 </my-photo>
