@@ -1,4 +1,5 @@
 <my-photo>
+  <!-- Layout -->
   <section class="column is-half">
     <img onload={ getExif } class="photo" src="./images/img3.jpg">
     <div class="exif columns is-multiline">
@@ -12,45 +13,39 @@
     </div>
   </section>
 
+  <!-- Logic -->
   <script>
-    var xhr= new XMLHttpRequest();
-    xhr.open('HEAD', './images/img1.jpg');
-    xhr.send();
 
-    xhr.addEventListener('load',function(e){
-      console.log(this.status);
+  var _self = this;
+  var exifAll = {};
+
+  this.exif = {
+    'camera': '--',
+    'ss': '--',
+    'f': '--',
+    'focal': '--',
+    'iso': '--',
+    'exposure': '--',
+    'flash': '--'
+  };
+
+  getExif(e) {
+    e.preventUpdate = true;
+    EXIF.getData(e.target, function() {
+      exifAll = EXIF.getAllTags(this);
+
+      // 必要な情報だけを抽出
+      _self.exif.camera = exifAll.Model;
+      _self.exif.ss = exifAll.ShutterSpeedValue;
+      _self.exif.f = exifAll.FNumber;
+      _self.exif.focal = exifAll.FocalLengthIn35mmFilm;
+      _self.exif.iso = exifAll.ISOSpeedRatings;
+      _self.exif.exposure = exifAll.ExposureTime;
+      _self.exif.flash = exifAll.Flash;
+      // 抽出後の情報でテンプレート変数をupdate
+      _self.update(_self.exif);
     });
+  }
 
-    var _self = this;
-    var exifAll = {};
-
-    this.exif = {
-      'camera': '--',
-      'ss': '--',
-      'f': '--',
-      'focal': '--',
-      'iso': '--',
-      'exposure': '--',
-      'flash': '--'
-    };
-
-    getExif(e) {
-      e.preventUpdate = true;
-      EXIF.getData(e.target, function() {
-        exifAll = EXIF.getAllTags(this);
-
-        // 必要な情報だけを抽出
-        _self.exif.camera = exifAll.Model;
-        _self.exif.ss = exifAll.ShutterSpeedValue;
-        _self.exif.f = exifAll.FNumber;
-        _self.exif.focal = exifAll.FocalLengthIn35mmFilm;
-        _self.exif.iso = exifAll.ISOSpeedRatings;
-        _self.exif.exposure = exifAll.ExposureTime;
-        _self.exif.flash = exifAll.Flash;
-        // 抽出後の情報でテンプレート変数をupdate
-        _self.update(_self.exif);
-      });
-    }    
-    
   </script>
 </my-photo>
