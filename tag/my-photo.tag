@@ -1,7 +1,7 @@
 <my-photo>
   <!-- Layout -->
-  <section class="column is-half">
-    <img onload={ getExif } class="photo" src="./images/img3.jpg">
+  <section each={ task, i in images } class="column is-half">
+    <img onload={ getExif } class="photo" src="./images/img{ i+1 }.jpg">
     <div class="exif columns is-multiline">
       <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif.camera }</span></p>
       <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif.ss }</span></p>
@@ -15,6 +15,8 @@
 
   <!-- Logic -->
   <script>
+
+  this.images = imageArray;
 
   var _self = this;
   var exifAll = {};
