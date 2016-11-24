@@ -3,13 +3,13 @@
   <section each={ task, i in images } class="column is-half">
     <img onload={ getExif } class="photo" src="./images/img{ i+1 }.jpg">
     <div class="exif columns is-multiline">
-      <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif.camera }</span></p>
-      <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif.ss }</span></p>
-      <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif.f }</span></p>
-      <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif.focal }</span></p>
-      <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif.iso }</span></p>
-      <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif.exposure }</span></p>
-      <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif.flash }</span></p>
+      <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif[i].camera }</span></p>
+      <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif[i].ss }</span></p>
+      <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif[i].f }</span></p>
+      <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif[i].focal }</span></p>
+      <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif[i].iso }</span></p>
+      <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif[i].exposure }</span></p>
+      <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif[i].flash }</span></p>
     </div>
   </section>
 
@@ -20,32 +20,26 @@
 
   var _self = this;
   var exifAll = {};
-
-  this.exif = {
-    'camera': '--',
-    'ss': '--',
-    'f': '--',
-    'focal': '--',
-    'iso': '--',
-    'exposure': '--',
-    'flash': '--'
-  };
+  this.exif = [];
 
   getExif(e) {
+
     e.preventUpdate = true;
     EXIF.getData(e.target, function() {
       exifAll = EXIF.getAllTags(this);
+      // 配列の当該番目に空Objectを挿入
+      _self.exif[e.item.i] = {};
+      console.log(_self.exif[e.item.i]);
+      _self.exif[e.item.i].camera = exifAll.Model;
+      _self.exif[e.item.i].ss = exifAll.ShutterSpeedValue;
+      _self.exif[e.item.i].f = exifAll.FNumber;
+      _self.exif[e.item.i].focal = exifAll.FocalLengthIn35mmFilm;
+      _self.exif[e.item.i].iso = exifAll.ISOSpeedRatings;
+      _self.exif[e.item.i].exposure = exifAll.ExposureTime;
+      _self.exif[e.item.i].flash = exifAll.Flash;
 
-      // 必要な情報だけを抽出
-      _self.exif.camera = exifAll.Model;
-      _self.exif.ss = exifAll.ShutterSpeedValue;
-      _self.exif.f = exifAll.FNumber;
-      _self.exif.focal = exifAll.FocalLengthIn35mmFilm;
-      _self.exif.iso = exifAll.ISOSpeedRatings;
-      _self.exif.exposure = exifAll.ExposureTime;
-      _self.exif.flash = exifAll.Flash;
       // 抽出後の情報でテンプレート変数をupdate
-      _self.update(_self.exif);
+      _self.update(_self.exif[e.item.i]);
     });
   }
 
