@@ -41,7 +41,7 @@ a {
     height: 100px;
     background-color: $black;
     color: $lightgray;
-    h1 {
+    .logo {
       font-size: 32px;
       line-height: 100px;
     }
@@ -50,9 +50,20 @@ a {
     padding-top: 20px;
     padding-bottom: 30px;
     background-color: $white;
-    h2 {
+    .headline {
       font-size: 26px;
       margin-bottom: 20px;
+    }
+    .filter-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .rangeForm {
+      padding: 5px 10px;
+      width: 100px;
+      font-size: 14px;
+      font-family: 'Dosis';
+      letter-spacing: .1em;
     }
   }
 }

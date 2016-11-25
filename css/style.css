@@ -76,7 +76,7 @@ a {
   height: 100px;
   background-color: #252525;
   color: #f0f0f0; }
-  .header .header-nav h1 {
+  .header .header-nav .logo {
     font-size: 32px;
     line-height: 100px; }
 
@@ -84,9 +84,18 @@ a {
   padding-top: 20px;
   padding-bottom: 30px;
   background-color: #ffffff; }
-  .header .filtering h2 {
+  .header .filtering .headline {
     font-size: 26px;
     margin-bottom: 20px; }
+  .header .filtering .filter-title {
+    font-size: 20px;
+    margin-bottom: 10px; }
+  .header .filtering .rangeForm {
+    padding: 5px 10px;
+    width: 100px;
+    font-size: 14px;
+    font-family: 'Dosis';
+    letter-spacing: .1em; }
 
 .main .photo {
   padding: 0;
