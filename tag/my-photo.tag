@@ -24,12 +24,6 @@
         <span class="icon-flash"></span>{ this.exif[i].flash }
       </p>
     </div>
-    <div class="modal">
-      <div class="modal-background"></div>
-      <div class="modal-content">
-        <img onload={ getExif } src="./images/img{ i+1 }.jpg">
-      </div>
-    </div>
   </section>
 
   <!-- Logic -->
