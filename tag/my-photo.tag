@@ -4,11 +4,11 @@
     <img onload={ getExif } class="photo" src="./images/img{ i+1 }.jpg">
     <div class="exif columns is-multiline">
       <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif[i].camera }</span></p>
-      <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif[i].f }</span></p>
-      <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif[i].focal }</span></p>
-      <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif[i].iso }</span></p>
-      <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif[i].exposure }</span></p>
-      <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif[i].flash }</span></p>
+      <p class="column is-one-third"><span class="icon-f"></span><span class="value">{ this.exif[i].f }</span></p>
+      <p class="column is-one-third"><span class="icon-focal"></span><span class="value">{ this.exif[i].focal }</span></p>
+      <p class="column is-one-third"><span class="icon-iso"></span><span class="value">{ this.exif[i].iso }</span></p>
+      <p class="column is-one-third"><span class="icon-shutter"></span><span class="value">{ this.exif[i].exposure }</span></p>
+      <p class="column is-one-third"><span class="icon-flash"></span><span class="value">{ this.exif[i].flash }</span></p>
     </div>
   </section>
 
@@ -52,8 +52,6 @@
           else if(exifAll.Flash == 'Flash fired, compulsory flash mode')   return 'Fired.';
         }();
 
-
-      console.log(exifAll);
       // 抽出後の情報でテンプレート変数をupdate
       _self.update(_self.exif[i]);
     });
