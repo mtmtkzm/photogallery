@@ -14,7 +14,7 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  font-size: 1.75em;
+  font-size: 1.5em;
   vertical-align: middle;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
@@ -39,10 +39,15 @@
   content: "\e905"; }
 
 [class^="icon-"], [class*=" icon-"] {
-  margin-right: .4em; }
+  margin-right: .5em;
+  position: relative;
+  top: -0.1em; }
 
 body {
-  background-color: #f0f0f0; }
+  background-color: #f0f0f0;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 800;
+  vertical-align: middle; }
   body .section {
     padding: 0;
     padding-right: calc( (100% - 1200px)/2);
@@ -92,11 +97,17 @@ body {
     transform: translate(-50%, -50%); }
 
 .main .exif {
-  padding: 4%; }
+  padding: 4%;
+  font-weight: 400;
+  font-size: 18px; }
+  .main .exif span {
+    vertical-align: middle; }
 
-.footer {
-  height: 40px;
+footer {
+  padding: 40px 0;
   text-align: center;
-  line-height: 40px;
-  background-color: #f0f0f0;
+  color: #ffffff;
+  background-color: #252525;
   box-shadow: 0 -1px 1px #dddddd; }
+  footer .footer-copyright {
+    margin-top: 20px; }

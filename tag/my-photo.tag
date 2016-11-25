@@ -56,7 +56,7 @@
       // 焦点距離
       _self.exif[i].focal = exifAll.FocalLength + ' mm';
       // ISO
-      _self.exif[i].iso = 'ISO ' + exifAll.ISOSpeedRatings;
+      _self.exif[i].iso = exifAll.ISOSpeedRatings;
       // 露出（シャッタースピード）
       _self.exif[i].exposure =
         function() { 

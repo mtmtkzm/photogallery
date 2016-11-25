@@ -2,11 +2,16 @@
 @import 'icon';
 
 [class^="icon-"], [class*=" icon-"] {
-  margin-right: .4em;
+  margin-right: .5em;
+  position: relative;
+  top: -0.1em;
 }
 
 body {
   background-color: $lightgray;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 800;
+  vertical-align: middle;
   $side-padding: calc( (100% - 1200px)/2 );
   .section {
     padding: 0;
@@ -70,13 +75,21 @@ body {
   }
   .exif {
     padding: 4%;
+    font-weight: 400;
+    font-size: 18px;
+    span {
+      vertical-align: middle;
+    }
   }
 }
 
-.footer {
-  height: 40px;
+footer {
+  padding: 40px 0;
   text-align: center;
-  line-height: 40px;
-  background-color: $lightgray;
+  color: $white;
+  background-color: $black;
   box-shadow: 0 -1px 1px #dddddd;
+  .footer-copyright {
+    margin-top: 20px;
+  }
 }
