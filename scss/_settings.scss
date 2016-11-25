@@ -2,3 +2,17 @@ $black: #252525;
 $gray: #959595;
 $lightgray: #f0f0f0;
 $white: #ffffff;
+
+
+@mixin media($media-width) {
+  @if $media-width == sp {
+    @media only screen and (min-width: 320px) and (max-width: 769px){
+      @content;
+    }
+  }
+  @else if $media-width == pc {
+    @media only screen and (min-width: 770px){
+      @content;
+    }
+  }
+}

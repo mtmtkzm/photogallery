@@ -1,28 +1,34 @@
 <my-photo class="columns is-multiline">
   <!-- Layout -->
-  <section class="column is-half" each={ task, i in images }>
+  <section class="column is-half photo" each={ task, i in images }>
     <figure class="image is-3by2">
       <img onload={ getExif } src="./images/img{ i+1 }.jpg">
     </figure>
-    <div class="exif columns is-multiline">
-      <p class="column is-one-third">
+    <div class="exif columns is-multiline is-mobile">
+      <p class="column is-12">
         <span class="icon-camera"></span>{ this.exif[i].camera }
       </p>
-      <p class="column is-one-third">
+      <p class="column is-half-mobile is-half-tablet is-one-third-desktop">
         <span class="icon-f"></span>{ this.exif[i].f }
       </p>
-      <p class="column is-one-third">
+      <p class="column is-half-mobile is-half-tablet is-one-third-desktop">
         <span class="icon-focal"></span>{ this.exif[i].focal }
       </p>
-      <p class="column is-one-third">
+      <p class="column is-half-mobile is-half-tablet is-one-third-desktop">
         <span class="icon-iso"></span>{ this.exif[i].iso }
       </p>
-      <p class="column is-one-third">
+      <p class="column is-half-mobile is-half-tablet is-one-third-desktop">
         <span class="icon-shutter"></span>{ this.exif[i].exposure }
       </p>
-      <p class="column is-one-third">
+      <p class="column is-half-mobile is-half-tablet is-one-third-desktop">
         <span class="icon-flash"></span>{ this.exif[i].flash }
       </p>
+    </div>
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <img onload={ getExif } src="./images/img{ i+1 }.jpg">
+      </div>
     </div>
   </section>
 

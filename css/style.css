@@ -41,18 +41,48 @@
 [class^="icon-"], [class*=" icon-"] {
   margin-right: .4em; }
 
-body .section {
-  padding: 0 calc( (100% - 1200px)/2); }
+body {
+  background-color: #f0f0f0; }
+  body .section {
+    padding: 0;
+    padding-right: calc( (100% - 1200px)/2);
+    padding-left: calc( (100% - 1200px)/2);
+    background-color: inherit; }
 
 .header .header-nav {
+  height: 100px;
   background-color: #252525;
   color: #f0f0f0; }
+  .header .header-nav h1 {
+    font-size: 32px;
+    line-height: 100px; }
+
+.header .filtering {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.9); }
+  .header .filtering h2 {
+    font-size: 26px;
+    margin-bottom: 20px; }
+
+.main .photo {
+  padding: 0;
+  width: 48%;
+  margin: 2% auto;
+  background-color: #ffffff;
+  transition: box-shadow .2s; }
+  .main .photo:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1); }
+  @media only screen and (min-width: 320px) and (max-width: 769px) {
+    .main .photo {
+      width: 96%; } }
 
 .main .image.is-3by2 {
   width: 100%;
   position: relative;
   overflow: hidden;
-  background-color: #f0f0f0; }
+  background-color: #ffffff; }
   .main .image.is-3by2 img {
     width: 100%;
     height: auto !important;
@@ -60,6 +90,9 @@ body .section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+
+.main .exif {
+  padding: 4%; }
 
 .footer {
   height: 40px;
