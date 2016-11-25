@@ -18,6 +18,12 @@ body {
     padding-right: $side-padding;
     padding-left: $side-padding;
     background-color: inherit;
+    @include media(sp) {
+      width: 100%;
+      $side-padding: 3%;
+      padding-right: $side-padding;
+      padding-left: $side-padding;
+    }
   }
 }
 
@@ -35,7 +41,6 @@ body {
     padding-top: 20px;
     padding-bottom: 30px;
     background-color: $white;
-    box-shadow: 0 10px 10px rgba(0,0,0,.9);
     h2 {
       font-size: 26px;
       margin-bottom: 20px;
@@ -49,12 +54,12 @@ body {
     width: 48%;
     margin: 2% auto;
     background-color: $white;
-    transition: box-shadow .2s;
-    &:hover {
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,.1);
-    }
     @include media(sp) {
-      width: 96%;
+      width: 100%;
+      margin-bottom: 4%;
+      .column {
+        padding: 4px;
+      }
     }
   }
   .image{
@@ -74,11 +79,14 @@ body {
     }
   }
   .exif {
-    padding: 4%;
+    padding: 6% 4% 4%;
     font-weight: 400;
     font-size: 18px;
     span {
       vertical-align: middle;
+    }
+    @include media(sp) {
+      font-size: 14px;
     }
   }
 }

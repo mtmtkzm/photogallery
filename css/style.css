@@ -53,6 +53,11 @@ body {
     padding-right: calc( (100% - 1200px)/2);
     padding-left: calc( (100% - 1200px)/2);
     background-color: inherit; }
+    @media only screen and (min-width: 320px) and (max-width: 769px) {
+      body .section {
+        width: 100%;
+        padding-right: 3%;
+        padding-left: 3%; } }
 
 .header .header-nav {
   height: 100px;
@@ -65,8 +70,7 @@ body {
 .header .filtering {
   padding-top: 20px;
   padding-bottom: 30px;
-  background-color: #ffffff;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.9); }
+  background-color: #ffffff; }
   .header .filtering h2 {
     font-size: 26px;
     margin-bottom: 20px; }
@@ -75,13 +79,13 @@ body {
   padding: 0;
   width: 48%;
   margin: 2% auto;
-  background-color: #ffffff;
-  transition: box-shadow .2s; }
-  .main .photo:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1); }
+  background-color: #ffffff; }
   @media only screen and (min-width: 320px) and (max-width: 769px) {
     .main .photo {
-      width: 96%; } }
+      width: 100%;
+      margin-bottom: 4%; }
+      .main .photo .column {
+        padding: 4px; } }
 
 .main .image.is-3by2 {
   width: 100%;
@@ -97,11 +101,14 @@ body {
     transform: translate(-50%, -50%); }
 
 .main .exif {
-  padding: 4%;
+  padding: 6% 4% 4%;
   font-weight: 400;
   font-size: 18px; }
   .main .exif span {
     vertical-align: middle; }
+  @media only screen and (min-width: 320px) and (max-width: 769px) {
+    .main .exif {
+      font-size: 14px; } }
 
 footer {
   padding: 40px 0;
