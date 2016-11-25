@@ -1,14 +1,28 @@
-<my-photo>
+<my-photo class="columns is-multiline">
   <!-- Layout -->
-  <section each={ task, i in images } class="column is-half">
-    <img onload={ getExif } class="photo" src="./images/img{ i+1 }.jpg">
+  <section class="column is-half" each={ task, i in images }>
+    <figure class="image is-3by2">
+      <img onload={ getExif } src="./images/img{ i+1 }.jpg">
+    </figure>
     <div class="exif columns is-multiline">
-      <p class="column is-one-third"><span class="icon-camera"></span><span class="value">{ this.exif[i].camera }</span></p>
-      <p class="column is-one-third"><span class="icon-f"></span><span class="value">{ this.exif[i].f }</span></p>
-      <p class="column is-one-third"><span class="icon-focal"></span><span class="value">{ this.exif[i].focal }</span></p>
-      <p class="column is-one-third"><span class="icon-iso"></span><span class="value">{ this.exif[i].iso }</span></p>
-      <p class="column is-one-third"><span class="icon-shutter"></span><span class="value">{ this.exif[i].exposure }</span></p>
-      <p class="column is-one-third"><span class="icon-flash"></span><span class="value">{ this.exif[i].flash }</span></p>
+      <p class="column is-one-third">
+        <span class="icon-camera"></span>{ this.exif[i].camera }
+      </p>
+      <p class="column is-one-third">
+        <span class="icon-f"></span>{ this.exif[i].f }
+      </p>
+      <p class="column is-one-third">
+        <span class="icon-focal"></span>{ this.exif[i].focal }
+      </p>
+      <p class="column is-one-third">
+        <span class="icon-iso"></span>{ this.exif[i].iso }
+      </p>
+      <p class="column is-one-third">
+        <span class="icon-shutter"></span>{ this.exif[i].exposure }
+      </p>
+      <p class="column is-one-third">
+        <span class="icon-flash"></span>{ this.exif[i].flash }
+      </p>
     </div>
   </section>
 

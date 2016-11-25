@@ -38,27 +38,32 @@
 .icon-shutter:before {
   content: "\e905"; }
 
-img {
-  max-width: 100%; }
-
 [class^="icon-"], [class*=" icon-"] {
-  margin-right: .5em; }
+  margin-right: .4em; }
 
 body .section {
   padding: 0 calc( (100% - 1200px)/2); }
 
 .header .header-nav {
   background-color: #252525;
-  color: #fafafa; }
+  color: #f0f0f0; }
 
-.header .filtering {
-  background-color: #fafafa;
-  color: #252525;
-  box-shadow: 0 1px 1px #dddddd; }
+.main .image.is-3by2 {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f0f0; }
+  .main .image.is-3by2 img {
+    width: 100%;
+    height: auto !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 .footer {
   height: 40px;
   text-align: center;
   line-height: 40px;
-  background-color: #fafafa;
+  background-color: #f0f0f0;
   box-shadow: 0 -1px 1px #dddddd; }

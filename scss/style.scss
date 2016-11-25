@@ -1,12 +1,8 @@
 @import 'settings';
 @import 'icon';
 
-img {
-  max-width: 100%;
-}
-
 [class^="icon-"], [class*=" icon-"] {
-  margin-right: .5em;
+  margin-right: .4em;
 }
 
 body {
@@ -20,14 +16,25 @@ body {
   .header-nav {
     background-color: $black;
     color: $lightgray;
-    h1 {
-      // margin-bottom: 0;
-    }
   }
-  .filtering {
-    background-color: $lightgray;
-    color: $black;
-    box-shadow: 0 1px 1px #dddddd;
+}
+
+.main {
+  .image{
+    &.is-3by2 {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      background-color: $lightgray;
+      img {
+        width: 100%;
+        height: auto !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
   }
 }
 
