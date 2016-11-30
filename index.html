@@ -20,55 +20,57 @@
     </nav>
     <div class="section filtering">
       <h2 class="headline">Filtering</h2>
-      <div class="columns is-multiline">
-        <div class="column is-one-third">
-          <h3 class="filter-title"><span class="icon-f"></span>F-number</h3>
-          <div>
-            <input id="filter-f-min" class="rangeForm" type="text">
-            <span>　〜　</span>
-            <input id="filter-f-max" class="rangeForm" type="text">
+      <form name="filteringForm" action="">
+        <div class="columns is-multiline">
+          <div class="column is-one-third">
+            <h3 class="filter-title"><span class="icon-f"></span>F-number</h3>
+            <div>
+              <input id="filter-f-min" class="rangeForm" type="text">
+              <span>　〜　</span>
+              <input id="filter-f-max" class="rangeForm" type="text">
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <h3 class="filter-title"><span class="icon-focal"></span>Focal length</h3>
+            <div>
+              <input id="filter-focal-min" class="rangeForm" type="text">
+              <span>　〜　</span>
+              <input id="filter-focal-max" class="rangeForm" type="text">
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <h3 class="filter-title"><span class="icon-iso"></span>ISO speed</h3>
+            <div>
+              <input id="filter-iso-min" class="rangeForm" type="text">
+              <span>　〜　</span>
+              <input id="filter-iso-max" class="rangeForm" type="text">
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <h3 class="filter-title"><span class="icon-shutter"></span>Shutter speed</h3>
+            <div>
+              <input id="filter-shutter-min" class="rangeForm" type="text">
+              <span>　〜　</span>
+              <input id="filter-shutter-max" class="rangeForm" type="text">
+            </div>
+          </div>
+          <div class="column is-one-third filter-flash">
+            <h3 class="filter-title"><span class="icon-flash"></span>Flash</h3>
+            <div>
+              <label>
+                <input type="radio" name="radio">
+                <span id="filter-flash-on" class="TFButton button">Fired</span>
+              </label>
+              <label>
+                <input type="radio" name="radio">
+                <span id="filter-flash-off" class="TFButton button">not Fired</span>
+              </label>
+            </div>
           </div>
         </div>
-        <div class="column is-one-third">
-          <h3 class="filter-title"><span class="icon-focal"></span>Focal length</h3>
-          <div>
-            <input id="filter-focal-min" class="rangeForm" type="text">
-            <span>　〜　</span>
-            <input id="filter-focal-max" class="rangeForm" type="text">
-          </div>
-        </div>
-        <div class="column is-one-third">
-          <h3 class="filter-title"><span class="icon-iso"></span>ISO speed</h3>
-          <div>
-            <input id="filter-iso-min" class="rangeForm" type="text">
-            <span>　〜　</span>
-            <input id="filter-iso-max" class="rangeForm" type="text">
-          </div>
-        </div>
-        <div class="column is-one-third">
-          <h3 class="filter-title"><span class="icon-shutter"></span>Shutter speed</h3>
-          <div>
-            <input id="filter-shutter-min" class="rangeForm" type="text">
-            <span>　〜　</span>
-            <input id="filter-shutter-max" class="rangeForm" type="text">
-          </div>
-        </div>
-        <div class="column is-one-third filter-flash">
-          <h3 class="filter-title"><span class="icon-flash"></span>Flash</h3>
-          <div>
-            <label>
-              <input type="radio" name="radio">
-              <span id="filter-flash-on" class="TFButton button">Fired</span>
-            </label>
-            <label>
-              <input type="radio" name="radio">
-              <span id="filter-flash-off" class="TFButton button">not Fired</span>
-            </label>
-          </div>
-        </div>
+        <span class="filter-button" id="js-filter-button">Filter!</span>
       </div>
-      <span id="js-filter-button">Filter!</span>
-    </div>
+    </form>
   </header>
 
   <main class="section main">
