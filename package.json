@@ -7,10 +7,10 @@
     "node-sass": "^3.7.0"
   },
   "scripts": {
-    "build": "node-sass ./scss --output ./css",
+    "build": "rm ./css/*.css & node-sass ./scss --output ./css",
     "server": "python -m SimpleHTTPServer 8000",
     "watch-scss": "node-sass ./scss --output ./css -w",
-    "watch": "npm run watch-scss & npm run server"    
+    "watch": "npm run watch-scss & npm run server"
   },
   "repository": {
     "type": "git",
