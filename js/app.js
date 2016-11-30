@@ -29,11 +29,24 @@ getImage(0);
 
 /* *****
 フィルタリング */
-// フィルタリングelmのvalue
-var filteredExif = {};
 
 // フィルター実行ボタン
 var button = document.getElementById('js-filter-button');
+
+var fmin = document.getElementById('filter-f-min');
+var fmax = document.getElementById('filter-f-max');
+var focalmin = document.getElementById('filter-focal-min');
+var focalmax = document.getElementById('filter-focal-max');
+var isomin = document.getElementById('filter-iso-min');
+var isomax = document.getElementById('filter-iso-max');
+var shuttermin = document.getElementById('filter-shutter-min');
+var shuttermax = document.getElementById('filter-shutter-max');
+var flashmin = document.getElementById('filter-flash-min');
+var flashmax = document.getElementById('filter-flash-max');
+
+// フィルタリングの値が入る
+var filteredExif = {};
+
 button.addEventListener('click', function (event) {
   filteredExif ={
     'f': {
