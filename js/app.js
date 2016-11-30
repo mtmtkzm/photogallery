@@ -16,15 +16,44 @@ function getImage(num) {
         imageArray.push(target);
         current += 1;
         getImage(num+1);
-        return;
       } else {
         number = current;
         riot.mount('my-photo');
-
-        return number;
       }
     }
   });
 }
 
 getImage(0);
+
+
+/* *****
+フィルタリング */
+// フィルタリングelmのvalue
+var filteredExif = {};
+
+// フィルター実行ボタン
+var button = document.getElementById('js-filter-button');
+button.addEventListener('click', function (event) {
+  filteredExif ={
+    'f': {
+      min: '100',
+      max: '120'
+    },
+    'focal':  {
+      min: '80',
+      max: '100' 
+    },
+    'iso': {
+      min: '400',
+      max: '1600'
+    },
+    'shutter': {
+      min: '1/160',
+      max: '1/100'
+    },
+    'flash': 'true'
+  };
+  console.log(filteredExif);
+});
+
