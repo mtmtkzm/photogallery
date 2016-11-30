@@ -97,6 +97,21 @@ a {
     font-family: 'Dosis';
     letter-spacing: .1em; }
 
+.header .filter-flash span {
+  font-weight: 400;
+  width: 100px;
+  margin-right: 10px;
+  text-align: center;
+  transition: all .2s; }
+
+.header .filter-flash input {
+  display: none; }
+  .header .filter-flash input:checked + span {
+    font-weight: bold;
+    color: white;
+    border-color: #00d1b2;
+    background-color: rgba(0, 209, 178, 0.75); }
+
 .main .photo {
   padding: 0;
   width: 48%;

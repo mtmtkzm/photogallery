@@ -66,6 +66,26 @@ a {
       letter-spacing: .1em;
     }
   }
+  .filter-flash {
+    span {
+      font-weight: 400;
+      width: 100px;
+      margin-right: 10px;
+      text-align: center;
+      transition: all .2s;
+    }
+    input {
+      display: none;
+      &:checked {
+        &+span {
+          font-weight: bold;
+          color: white;
+          border-color: $accent;
+          background-color: rgba($accent, .75);
+        }
+      }
+    }
+  }
 }
 
 .main {
