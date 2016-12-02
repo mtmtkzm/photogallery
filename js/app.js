@@ -13,7 +13,7 @@ function getImage(num) {
   xmlhttp.addEventListener('readystatechange', function() {
     if (xmlhttp.readyState == 4) {
       if (xmlhttp.status == 200) {
-        imageArray.push(target);
+        imageArray.unshift(target);
         current += 1;
         getImage(num+1);
       } else {

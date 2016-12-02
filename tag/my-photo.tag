@@ -2,7 +2,7 @@
   <!-- Layout -->
   <section class="column is-half photo" each={ task, i in images }>
     <figure class="image is-3by2">
-      <img onload={ getExif } src="./images/img{ i+1 }.jpg">
+      <img onload={ getExif } src="{this.images[i]}">
     </figure>
     <div class="exif columns is-multiline is-mobile">
       <p class="column is-12">
@@ -28,7 +28,7 @@
 
   <!-- Logic -->
   <script>
-  this.images = imageArray.reverse();
+  this.images = imageArray;
   console.log(this.images);
   var _self = this;
   var exifAll = {};
