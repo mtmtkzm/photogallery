@@ -18,7 +18,7 @@
         <span class="icon-iso"></span>{ this.exif[i].iso }
       </p>
       <p class="column is-half-mobile is-half-tablet is-one-third-desktop">
-        <span class="icon-shutter"></span>{ this.exif[i].exposure }
+        <span class="icon-shutter"></span>{ this.exif[i].shutter }
       </p>
       <p class="column is-half-mobile is-half-tablet is-one-third-desktop">
         <span class="icon-flash"></span>{ this.exif[i].flash }
@@ -28,7 +28,8 @@
 
   <!-- Logic -->
   <script>
-  this.images = imageArray;
+  this.images = imageArray.reverse();
+  console.log(this.images);
   var _self = this;
   var exifAll = {};
   this.exif = [];
@@ -45,20 +46,16 @@
       // 必要な情報を抽出し代入
       // カメラの機種
       _self.exif[i].camera = exifAll.Model;
-      // F値
       _self.exif[i].f = 'f/ ' + exifAll.FNumber;
-      // 焦点距離
       _self.exif[i].focal = exifAll.FocalLength + ' mm';
-      // ISO
       _self.exif[i].iso = exifAll.ISOSpeedRatings;
-      // 露出（シャッタースピード）
-      _self.exif[i].exposure =
-        function() { 
+      _self.exif[i].shutter =
+        (function() { 
           var denominator = exifAll.ExposureTime.denominator;
           var numerator = exifAll.ExposureTime.numerator;
           if(denominator == 1) return numerator + ' s';
           return String(numerator) + '/' + String(denominator) + ' s';
-        }();
+        })();
       // フラッシュ
       _self.exif[i].flash =
         function() { 
