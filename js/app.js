@@ -30,34 +30,34 @@ getImage(0);
 /* *****
 フィルタリング */
 
-// フォーム
-var form = document.forms.filteringForm;
+// // フォーム
+// var form = document.forms.filteringForm;
 
-// フィルター実行ボタン
-var button = document.getElementById('js-filter-button');
+// // フィルター実行ボタン
+// var button = document.getElementById('js-filter-button');
 
-// フィルタリングの値が入る
-var filteredExif = {};
+// // フィルタリングの値が入る
+// var filteredExif = {};
 
-button.addEventListener('click', function (event) {
-  filteredExif ={
-    'f': {
-      min: form.fMin.value,
-      max: form.fMax.value
-    },
-    'focal': {
-      min: form.focalMin.value,
-      max: form.focalMax.value
-    },
-    'iso': {
-      min: form.isoMin.value,
-      max: form.isoMax.value
-    },
-    'shutter': {
-      min: form.shutterMin.value,
-      max: form.shutterMax.value
-    },
-    'flash': true
-  };
-  console.log(filteredExif);
-});
+// button.addEventListener('click', function (event) {
+//   filteredExif ={
+//     'f': {
+//       min: form.fMin.value,
+//       max: form.fMax.value
+//     },
+//     'focal': {
+//       min: form.focalMin.value,
+//       max: form.focalMax.value
+//     },
+//     'iso': {
+//       min: form.isoMin.value,
+//       max: form.isoMax.value
+//     },
+//     'shutter': {
+//       min: form.shutterMin.value,
+//       max: form.shutterMax.value
+//     },
+//     'flash': true
+//   };
+//   console.log(filteredExif);
+// });
