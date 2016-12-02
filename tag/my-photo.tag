@@ -44,7 +44,6 @@
       _self.exif[i] = {};
 
       // 必要な情報を抽出し代入
-      // カメラの機種
       _self.exif[i].camera = exifAll.Model;
       _self.exif[i].f = 'f/ ' + exifAll.FNumber;
       _self.exif[i].focal = exifAll.FocalLength + ' mm';
@@ -56,7 +55,6 @@
           if(denominator == 1) return numerator + ' s';
           return String(numerator) + '/' + String(denominator) + ' s';
         })();
-      // フラッシュ
       _self.exif[i].flash =
         function() { 
           if(exifAll.Flash == 'Flash did not fire, compulsory flash mode') return 'not Fire.';
