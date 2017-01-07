@@ -4,12 +4,9 @@
 var current = 0; // 最終的な返り値
 var allImages = []; // 写真一覧
 
-
 function getImage(num) {
   var imgPath = './images/img' + (num+1) + '.jpg';
   var xmlhttp = new XMLHttpRequest();
-
-
 
   xmlhttp.open('HEAD', imgPath);
   xmlhttp.send();

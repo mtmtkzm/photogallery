@@ -31,13 +31,10 @@
   var _self = this;
   this.images = allImages;
 
-  var exifAll = {};
-  var exif = [];
-
   setExif = function(e) {
     e.preventUpdate = true;
     EXIF.getData(e.target, function() {
-      exifAll = EXIF.getAllTags(this);
+      var exifAll = {} = EXIF.getAllTags(this);
       var i = e.item.i;
 
       // 必要な情報を抽出し代入
@@ -48,10 +45,8 @@
       allImages[i].exif.shutter = getShutter(exifAll);
       allImages[i].exif.flash = getFlash(exifAll);
 
-      return allImages[i];
+      _self.update(allImages);
     });
-    console.log(allImages);
-    _self.update(allImages);
   }
 
   var getModel = function(arr) {
@@ -69,7 +64,6 @@
   var getIso = function(arr) {
     var ISO = arr.ISOSpeedRatings;
     return ISO;
-
   }
   var getShutter = function(arr) {
     var denominator = arr.ExposureTime.denominator; // 分母
@@ -81,9 +75,9 @@
     }    
   }
   var getFlash = function(arr) {
-    if(exifAll.Flash === 'Flash did not fire, compulsory flash mode') {
+    if (arr.Flash === 'Flash did not fire, compulsory flash mode') {
       return 'not Fire.';
-    } else if (exifAll.Flash === 'Flash fired, compulsory flash mode') {
+    } else if (arr.Flash === 'Flash fired, compulsory flash mode') {
       return 'Fired.';
     } else {
       return '--';
